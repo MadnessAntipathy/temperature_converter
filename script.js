@@ -20,8 +20,14 @@ function getValue(){
 //function that gets the name of the user and returns it when getValue function gets called
 function getName(){
   var x = event.target.value;
+  var hasNonWord = /[\d!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
   console.log(x);
   document.getElementById("yourname").textContent=x;
+  if (hasNonWord.test(x)){
+    document.getElementById("weird").textContent="(That's a weird name...)";
+  } else{
+    document.getElementById("weird").textContent="";
+  }
 }
 
 //function that displays the data to the field
