@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>temperature converter</h1>
+    <h2>Before we begin, tell me your name in the box below</h2>
+    <input class="starter" id="name" placeholder="Your name goes here" onchange="getName()"/>
+    <h2>Now choose your temperature unit from the drop down box below</h2>
+    <select class="select" id="tempselector">
+      <option>--Select an option--</option>
+      <option>Degrees Celsius</option>
+      <option>Degrees Fahrenheit</option>
+      <option>Kelvin</option>
+    </select>
+    <div>
+      <p id="selecterror">Hey! You forgot to make your selection before proceeding!</p>
+    </div>
+    <h2>And put in a temperature value...</h2>
+    <input class="starter" id="input" placeholder="Temperature goes here" onchange="getValue()"/>
+    <h2>output in <span id="temp1">...</span>:</h2>
+    <p class="starter" id="output1">Watch the magic happen!</p>
+    <h2>output in <span id="temp2">...</span>:</h2>
+    <p class="starter" id="output2">Watch the magic happen!</p>
+    <div>
+      <h2 class="result">Hey <span id="yourname"></span>... <span id="tempfeel"></span></h2>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
